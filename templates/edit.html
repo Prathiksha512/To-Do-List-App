@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Edit Task</h1>
+    <form action="/edit/{{ task.id }}" method="post">
+        <input type="text" name="task" value="{{ task.content }}" required>
+        <button type="submit">Update Task</button>
+    </form>
+    <a href="/">Back to Todo List</a>
+</body>
+</html>
